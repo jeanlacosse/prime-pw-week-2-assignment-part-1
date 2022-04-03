@@ -6,7 +6,7 @@ const firstName = 'Jean-Luc';
 const lastName = 'LaCosse';
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
-const fullName = firstName + lastName;
+const fullName = firstName + ' ' + lastName;
 
 // 4 - Console log the value of `fullName`
 console.log(fullName);
@@ -61,14 +61,37 @@ console.log('I have enough pets')
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
-
+let mostPets = 0
+if (pets > friendsPets) {
+  mostPets = pets;
+} else if (pets < friendsPets) {
+  mostPets = friendsPets
+} else {
+  mostPets = pets;
+  console.log('Same amount of pets!')
+}
+console.log(mostPets)
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
 //      "Second is the best" if your lucky number is 2
 //      "Third is the one with the polka dot dress" if your lucky number is 3
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
-
+switch(luckyNumber) {
+  case 1:
+    console.log('First is the worst');
+    break;
+  case 2:
+    console.log('Second is the best');
+    break;
+  case 3:
+    console.log('Third is the one with the polka dot dress');
+    break;
+  default:
+    console.log('Luck is what happens when preparation meets opprtunity');
+}
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 
 
+const getOutside = adventurous ? 'Adventures are great!' : 'How about we stay home?';
+console.log(getOutside);
